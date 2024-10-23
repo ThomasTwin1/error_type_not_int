@@ -1,0 +1,23 @@
+
+# You may encounter a TypeError when trying to print a variable that contains an integer within a string:
+# age = 23
+# message = "Hi Andy, are you " + age + "?"
+# print(message)
+
+# TypeError: can only concatenate str (not "int") to str
+
+# This error occurs because Python cannot combine different data types.
+# In this case, Python recognizes that you're trying to use an integer variable, but it can't interpret it correctly,
+# as it could either represent the integer 23 or the characters '2' and '3'.
+# To resolve this, you need to explicitly convert the integer to a string using the str() function.
+
+age = 23
+message = "Hi Andy, are you " + str(age) + "?"
+print(message)
+
+# Now python knows you want to display a str and not an integer
+
+# You must use an f-string if you want to keep the value as an integer
+age = 23
+message = f"Hi Andy, are you {age}?"
+print(message)
